@@ -1,0 +1,26 @@
+{
+  "name": "orf-ionic",
+  "version": "0.0.0",
+  "authors": [
+    "Jake Rigby <jakewigby@gmail.com>"
+  ],
+  "description": "default ionic views and config for orf",
+  "main": "src/js/ng-orf-ionic.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "orf",
+    "authentication",
+    "ionic"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jake-rigby/orf-ionic",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

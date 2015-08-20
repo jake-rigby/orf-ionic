@@ -1,0 +1,80 @@
+<ion-view title="Login" >
+	<ion-content  class="has-header padding">
+		<div ng-if="loggedIn"  ng-show="!loggingIn">
+			<div ng-if="photo" class="row">
+				<div class="col text-center">
+					<img class="circle" style="width:256px; height:256px;" src="data:image/jpeg;base64,{{photo}}">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col text-center">
+					<h2>{{user.profile.displayName}}</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col text-center">
+					<h3>{{user.profile.email}}</h3>
+				</div>
+			</div>
+			<div class="row" >
+				<div class="col text-center">
+					<button ng-click="logout()" class="btn btn-danger btn-lg"><i class="ion-log-out"></i>logout</button>
+				</div>
+			</div>
+			<div class="row" ng-if="!googleConnected">
+				<div class="col text-center">
+					<button ng-click="googleConnect()" class="btn btn-primary btn-lg"><i class="ion-social-google"></i>connect to google</button>
+				</div>
+			</div>		
+			<div class="row">
+				<div class="col text-center">
+					<button ng-controller="StartCtrl" ng-click="start()" class="btn btn-default btn-lg"><i class="ion-home"></i></button>
+				</div>
+			</div>		
+		</div>
+
+		<div ng-if="!loggedIn" ng-show="!loggingIn">
+			<div class="row">
+				<div class="col text-center">
+					<img class="circle" style="width:256px; height:256px;" src="images/login_alien.png"/>
+				</div>
+			</div>
+			<div class="row pading-vertical">
+				<div class="col text-center">
+					<button ng-click="googleLogin()" class="btn btn-primary btn-lg" ><i class="icon ion-social-google"></i> log in with Google</button>
+				</div>
+			</div>
+			<div class="row pading-vertical">
+				<div class="col text-center">
+					<a href="#/pwlogin"><button class="btn btn-primary btn-lg" ><i class="icon ion-log-in"></i> log in with password</button></a>
+				</div>
+			</div>
+			<div class="row pading-vertical">
+				<div class="col text-center">
+					<a href="#/signup" class="btn btn-primary btn-lg" >sign up</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col text-center">
+					<div ng-show="loginError" class="text-danger"> {{loginError}}</div>
+					<div ng-show="logoutError" class="text-danger"> {{logoutError}}</div>
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div ng-show="loggingIn">
+			<div class="row">
+				<div class="col text-center">
+					<ion-spinner class="lg" icon="android"></ion-spinner>
+				</div>
+			</div>
+			<div class="row pading-vertical">
+				<div class="col text-center">
+					<h2>Logging you in</h2>
+				</div>
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>

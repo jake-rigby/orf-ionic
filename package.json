@@ -1,0 +1,24 @@
+{
+  "name": "orf-ionic",
+  "version": "1.0.0",
+  "description": "default ionic views and config for orf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jake-rigby/orf-ionic"
+  },
+  "keywords": [
+    "orf",
+    "authentication",
+    "ionic"
+  ],
+  "author": "Jake Rigby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jake-rigby/orf-ionic/issues"
+  },
+  "homepage": "https://github.com/jake-rigby/orf-ionic"
+}

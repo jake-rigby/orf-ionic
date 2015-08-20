@@ -1,0 +1,40 @@
+<ion-view title="Login">
+	<ion-content class="has-header padding">
+		<div class="row pading-vertical">
+			<div class="col-80 col-offset-10">
+				<form role="form" class="form" ng-submit="signup(username, firstname, surname, email, password)">
+					<div class="form-group text-center">
+						<div>Enter your precious details</div>
+					</div>
+					<div class="form-group">
+						<input name="username" id="un" type="text" class="form-control" placeholder=" username" ng-model="username">
+					</div>
+					<div class="form-group">
+						<input name="firstname" id="fn" type="text" class="form-control" placeholder=" first name" ng-model="firstname">
+					</div>
+					<div class="form-group">
+						<input name="surname" id="sn" type="text" class="form-control" placeholder=" surname" ng-model="surname">
+					</div>
+					<div class="form-group">
+						<input name="email" id="em" type="text" class="form-control" placeholder=" email" ng-model="email">
+					</div>
+					<div class="form-group">
+						<input name="password" id="pw" type="password" class="form-control" placeholder=" password" ng-model="password">
+					</div>
+					<div class="text-center">
+						<button type="submit" class="btn btn-primary btn-lg"><i class="ion-android-done"></i></button>			
+					</div>
+				</form>
+				<div class="form-group text-center" style="padding-top:10px;">
+					<a href="#/login"><button class="btn btn-primary btn-lg"><i class="ion-close-round"></i></button></a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col text-center">
+				<div ng-show="signupError" class="text-danger"> {{signupError}}</div>
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>
