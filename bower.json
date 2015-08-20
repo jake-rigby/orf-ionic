@@ -5,7 +5,10 @@
     "Jake Rigby <jakewigby@gmail.com>"
   ],
   "description": "default ionic views and config for orf",
-  "main": "src/js/ng-orf-ionic.js",
+   "main": [
+    "src/html/**/*",
+    "src/js/ng-orf-ionic.js"
+  ],
   "moduleType": [
     "globals"
   ],
