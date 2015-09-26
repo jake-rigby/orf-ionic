@@ -1,34 +1,30 @@
-<ion-view title="Login" >
-	<ion-content  class="has-header padding">
-		<div ng-if="loggedIn"  ng-show="!loggingIn">
-			<div ng-if="photo" class="row">
+<ion-view title="Login">
+	<ion-content  class="padding center-scroll-content" >
+		
+		<div ng-if="loggedIn" ng-show="!loggingIn">
+			<div ng-if="photo!=null" class="row">
 				<div class="col text-center">
-					<img class="circle" style="width:256px; height:256px;" src="data:image/jpeg;base64,{{photo}}">
+					<img class="circle" style="width:128px; height:128px;" src="data:image/jpeg;base64,{{photo}}">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col text-center">
-					<h2>{{user.profile.displayName}}</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col text-center">
-					<h3>{{user.profile.email}}</h3>
+					<h2 class="redfront">{{user.profile.username}}</h2>
 				</div>
 			</div>
 			<div class="row" >
 				<div class="col text-center">
-					<button ng-click="logout()" class="btn btn-danger btn-lg"><i class="ion-log-out"></i>logout</button>
+					<button ng-click="logout()" class="button button-block button-icon button-icon-large"><i class="icon ion-log-out redfront"></i></button>
 				</div>
 			</div>
 			<div class="row" ng-if="!googleConnected">
 				<div class="col text-center">
-					<button ng-click="googleConnect()" class="btn btn-primary btn-lg"><i class="ion-social-google"></i>connect to google</button>
+					<button class="button button-block button-icon button-icon-large redfront" ng-click="googleConnect()" >+<i class="icon ion-social-google redfront"></i></button>
 				</div>
 			</div>		
 			<div class="row">
 				<div class="col text-center">
-					<button ng-controller="StartCtrl" ng-click="start()" class="btn btn-default btn-lg"><i class="ion-home"></i></button>
+					<a ng-controller="StartCtrl" ui-sref="home.launcher" nav-clear class="button button-block button-icon button-icon-large redfront"><i class="icon ion-home redfront"></i></a>
 				</div>
 			</div>		
 		</div>
@@ -36,22 +32,22 @@
 		<div ng-if="!loggedIn" ng-show="!loggingIn">
 			<div class="row">
 				<div class="col text-center">
-					<img class="circle" style="width:256px; height:256px;" src="images/login_alien.png"/>
+					<img class="circle" style="width:128px; height:128px;" src="images/hoodie.jpg"/>
 				</div>
 			</div>
-			<div class="row pading-vertical">
+			<div class="row">
 				<div class="col text-center">
-					<button ng-click="googleLogin()" class="btn btn-primary btn-lg" ><i class="icon ion-social-google"></i> log in with Google</button>
+					<button ng-click="googleLogin()" class="button button-block button-icon button-icon-large" ><i class="icon ion-social-google redfront"></i></button>
 				</div>
 			</div>
-			<div class="row pading-vertical">
+			<div class="row">
 				<div class="col text-center">
-					<a href="#/pwlogin"><button class="btn btn-primary btn-lg" ><i class="icon ion-log-in"></i> log in with password</button></a>
+					<a ui-sref="pwlogin" class="button button-block button-icon button-icon-large" ><i class="icon ion-log-in redfront"></i></a>
 				</div>
 			</div>
-			<div class="row pading-vertical">
+			<div class="row">
 				<div class="col text-center">
-					<a href="#/signup" class="btn btn-primary btn-lg" >sign up</a>
+					<a ui-sref="signup" class="button button-block button-icon button-icon-large"><i class="icon ion-clipboard redfront"></i></a>
 				</div>
 			</div>
 			<div class="row">
@@ -59,7 +55,6 @@
 					<div ng-show="loginError" class="text-danger"> {{loginError}}</div>
 					<div ng-show="logoutError" class="text-danger"> {{logoutError}}</div>
 				</div>
-			</div>
 			</div>
 		</div>
 

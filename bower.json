@@ -7,7 +7,8 @@
   "description": "default ionic views and config for orf",
    "main": [
     "src/html/**/*",
-    "src/js/ng-orf-ionic.js"
+    "src/js/ng-orf-ionic.js",
+    "src/css/ng-orf-ionic.ccc"
   ],
   "moduleType": [
     "globals"
